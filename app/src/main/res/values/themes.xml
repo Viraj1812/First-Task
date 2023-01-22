@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FirstTask" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#032AEC</item>
+        <item name="colorPrimaryVariant">#032AEC</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+</resources>
