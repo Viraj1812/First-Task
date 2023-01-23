@@ -24,12 +24,12 @@ class ResidentsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
 
 
-        val view: View = inflater.inflate(R.layout.fragment_residents, container, false)
+        val view: View? = inflater.inflate(R.layout.fragment_residents, container, false)
 
-        val text1 = view.findViewById<TextView>(R.id.txtCat)
+        val text1 = view?.findViewById<TextView>(R.id.txtCat)
         val temp = "Category "
         val tempadd = "*"
         val builder = SpannableStringBuilder(temp+tempadd)
@@ -38,7 +38,7 @@ class ResidentsFragment : Fragment() {
             ForegroundColorSpan(Color.RED), temp.length, builder.length,
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        text1.text = builder
+        text1!!.text = builder
 
         val text2 = view.findViewById<TextView>(R.id.txtLoc)
         val temp2 = "Locality "
@@ -49,7 +49,7 @@ class ResidentsFragment : Fragment() {
             ForegroundColorSpan(Color.RED), temp2.length, builder2.length,
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        text2.text = builder2
+        text2!!.text = builder2
 
         val text3 = view.findViewById<TextView>(R.id.txtCom)
         val temp3 = "Comments "
@@ -89,7 +89,7 @@ class ResidentsFragment : Fragment() {
         localitySpinner.adapter = localityadapter
 
         categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
 
             }
 
@@ -99,7 +99,7 @@ class ResidentsFragment : Fragment() {
         }
 
         localitySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
 
             }
 
